@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaochao Song | 宋高超</title>
+  <meta name="description" content="Gaochao Song (宋高超), Ph.D. student at The University of Hong Kong, working on 3D vision, graphics, SfM/SLAM and low-level vision." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='Georgia'>G</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body>
+  <!-- ================= 顶部导航 ================= -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#about" class="brand">Gaochao Song</a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- ================= 左侧个人信息卡 ================= -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar-frame">
+          <img class="avatar" src="images/person.jpg" alt="Gaochao Song" />
+        </div>
+        <h1 class="name">Gaochao Song</h1>
+        <p class="name-alt">宋高超</p>
+        <p class="role">Ph.D. Student</p>
+        <p class="affiliation">The University of Hong Kong</p>
+
+        <ul class="meta">
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hong Kong SAR, China
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <a href="mailto:gaochaosong@connect.hku.hk">gaochaosong@connect.hku.hk</a>
+          </li>
+        </ul>
+
+        <div class="socials">
+          <a href="https://scholar.google.com/citations?user=5LbyDkcAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+          </a>
+          <a href="mailto:gaochaosong@connect.hku.hk" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+          <a href="https://github.com/gaochao-s" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= 主内容 ================= -->
+    <main class="content">
+
+      <!-- About -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="prose">
+          <p>
+            I am a Ph.D. student at The University of Hong Kong (HKU), advised by
+            <a href="https://scholar.google.com/citations?user=fe-1v0MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Shenghua Gao</a>.
+            I am currently a research intern at Tencent Hunyuan 3D, advised by
+            <a href="https://chenzhuooooo.github.io/" target="_blank" rel="noopener">Zhuo Chen</a> and Chunchao Guo. Before that, I earned my bachelor’s and master’s degrees from Tianjin University.
+          </p>
+          <p>
+            My research is driven by curiosity, and I enjoy exploring different fields. My current research focuses on
+            3D generation.
+            Before that, I worked closely with
+            <a href="https://wanghao.tech/zh/" target="_blank" rel="noopener">Prof. Hao Wang</a> at HKUST(GZ) on
+            3D reconstruction and SfM/SLAM, and with
+            <a href="https://personal.ntu.edu.sg/yhe/" target="_blank" rel="noopener">Prof. Ying He</a> at NTU on
+            computer graphics.
+          </p>
+          <p>
+            Outside of research, I love playing 2D metroidvania and platformer games (e.g., I have unlocked all achievements in
+            <em>Celeste</em>), as well as 3D souls-like games (e.g., I have spent 1,500+ hours in <em>Elden Ring: Nightreign</em>).
+          </p>
+        </div>
+
+        <div class="interests">
+          <h3 class="sub-title">Research Interests</h3>
+          <div class="tags">
+            <span class="tag">3D Vision</span>
+            <span class="tag">Graphics</span>
+            <span class="tag">SfM / SLAM</span>
+            <span class="tag">Low-level Vision</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section id="news" class="section">
+        <h2 class="section-title">News</h2>
+        <ul class="news-list" id="newsList">
+          <li><time>2026.09</time><span><span class="new-badge">New</span> <strong>Mesh BDF</strong> is accepted to <strong>NeurIPS 2026</strong> as a <em>Spotlight</em>.</span></li>
+          <li><time>2026.05</time><span>Joined <strong>Tencent Hunyuan 3D</strong> as a research intern.</span></li>
+          <li><time>2026.01</time><span><strong>Mesh Silksong</strong> is accepted to <strong>ICLR 2026</strong>.</span></li>
+          <!-- <li><time>2025.01</time><span><strong>GraphGS</strong> is accepted to <strong>ICLR 2025</strong>.</span></li>
+          <li class="news-extra"><time>2024.09</time><span><strong>GVKF</strong> is accepted to <strong>NeurIPS 2024</strong>.</span></li>
+          <li class="news-extra"><time>2023.02</time><span><strong>OPE-SR</strong> is accepted to <strong>CVPR 2023</strong>.</span></li> -->
+        </ul>
+        <button class="link-btn" id="newsToggle">Show more</button>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="section">
+        <div class="section-head">
+          <h2 class="section-title">Publications</h2>
+          <a class="muted-link" href="https://scholar.google.com/citations?user=5LbyDkcAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
+        </div>
+        <p class="note"><sup>*</sup> Equal contribution</p>
+
+        <div class="filters" role="tablist">
+          <button class="chip active" data-filter="selected">Selected</button>
+          <button class="chip" data-filter="all">All</button>
+          <button class="chip" data-filter="conference">Conference</button>
+          <button class="chip" data-filter="journal">Journal</button>
+        </div>
+
+        <!--
+          每篇论文是一个 <article class="pub">
+          data-type: conference / journal / preprint
+          data-selected="true" 表示出现在 Selected 中
+          无配图的论文使用 class="pub pub-compact"
+        -->
+        <div class="pub-list" id="pubList">
+
+          <!-- Mesh BDF -->
+          <article class="pub" data-type="conference" data-selected="true">
+            <div class="pub-thumb">
+              <img src="images/meshbdf.png" alt="Mesh BDF" loading="lazy" />
+              <span class="venue-badge">NeurIPS 2026</span>
+            </div>
+            <div class="pub-body">
+              <h3 class="pub-title">Mesh BDF: Barycentric Dominance Field for 3D Native Mesh Generation</h3>
+              <p class="pub-authors"><span class="me">Gaochao Song</span>, Haohan Weng, Luo Zhang, Zibo Zhao, Shenghua Gao</p>
+              <p class="pub-venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2026 <span class="highlight">Spotlight</span></p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2606.31777" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://arxiv.org/abs/2606.31777" class="pill" target="_blank" rel="noopener">arXiv</a>
+                <a href="https://gaochao-s.github.io/pages/MeshBDF/" class="pill" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/gaochao-s/MeshBDF" class="pill" target="_blank" rel="noopener">Code</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@inproceedings{song2026meshbdf,
+  title     = {Mesh BDF: Barycentric Dominance Field for 3D Native Mesh Generation},
+  author    = {Song, Gaochao and Weng, Haohan and Zhang, Luo and Zhao, Zibo and Gao, Shenghua},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</pre>
+            </div>
+          </article>
+
+          <!-- Mesh Silksong -->
+          <article class="pub" data-type="conference" data-selected="true">
+            <div class="pub-thumb">
+              <img src="images/meshsilksong.png" alt="Mesh Silksong" loading="lazy" />
+              <span class="venue-badge">ICLR 2026</span>
+            </div>
+            <div class="pub-body">
+              <h3 class="pub-title">Mesh Silksong: Topology-Preserved Auto-Regressive Mesh Generation in the Manner of Weaving Silk</h3>
+              <p class="pub-authors"><span class="me">Gaochao Song</span>, Zibo Zhao, Haohan Weng, Jingbo Zeng, Rongfei Jia, Shenghua Gao</p>
+              <p class="pub-venue"><em>International Conference on Learning Representations (ICLR)</em>, 2026</p>
+              <div class="pub-links">
+                <a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/b739d7ae14c0dd4c7619476f3f80ec98-Paper-Conference.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/b739d7ae14c0dd4c7619476f3f80ec98-Abstract-Conference.html" class="pill" target="_blank" rel="noopener">Paper</a>
+                <a href="https://gaochao-s.github.io/pages/MeshSilksong/" class="pill" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/gaochao-s/Mesh-Silksong" class="pill" target="_blank" rel="noopener">Code</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@inproceedings{song2026meshsilksong,
+  title     = {Topology-Preserved Auto-Regressive Mesh Generation in the Manner of Weaving Silk},
+  author    = {Song, Gaochao and Zhao, Zibo and Weng, Haohan and Zeng, Jingbo and Jia, Rongfei and Gao, Shenghua},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2026}
+}</pre>
+            </div>
+          </article>
+
+          <!-- Text2CSG -->
+          <article class="pub pub-compact" data-type="journal" data-selected="false">
+            <div class="pub-body">
+              <h3 class="pub-title"><span class="venue-inline">CAD 2026</span>Text2CSG: Generating CAD Models from Natural Language via Constructive Solid Geometry</h3>
+              <p class="pub-authors">Luo Zhang, <span class="me">Gaochao Song</span>, Haocong Rao, Zhengyu Wen, Jiangbei Hu, Ying He</p>
+              <p class="pub-venue"><em>Computer-Aided Design</em>, 2026</p>
+              <div class="pub-links">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0010448526000977" class="pill" target="_blank" rel="noopener">Paper</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@article{zhang2026text2csg,
+  title   = {Text2CSG: Generating CAD Models from Natural Language via Constructive Solid Geometry},
+  author  = {Zhang, Luo and Song, Gaochao and Rao, Haocong and Wen, Zhengyu and Hu, Jiangbei and He, Ying},
+  journal = {Computer-Aided Design},
+  pages   = {104127},
+  year    = {2026}
+}</pre>
+            </div>
+          </article>
+
+          <!-- GraphGS -->
+          <article class="pub" data-type="conference" data-selected="true">
+            <div class="pub-thumb">
+              <img src="images/graphgs.png" alt="GraphGS" loading="lazy" />
+              <span class="venue-badge">ICLR 2025</span>
+            </div>
+            <div class="pub-body">
+              <h3 class="pub-title">Graph-Guided Scene Reconstruction from Images with 3D Gaussian Splatting</h3>
+              <p class="pub-authors">Chong Cheng<sup>*</sup>, <span class="me">Gaochao Song</span><sup>*</sup>, Yiyang Yao, Qinzheng Zhou, Gangjian Zhang, Hao Wang</p>
+              <p class="pub-venue"><em>International Conference on Learning Representations (ICLR)</em>, 2025</p>
+              <div class="pub-links">
+                <a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/7a8e7fd295aa04eac4b470ae27f8785c-Paper-Conference.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/7a8e7fd295aa04eac4b470ae27f8785c-Abstract-Conference.html" class="pill" target="_blank" rel="noopener">Paper</a>
+                <a href="https://3dagentworld.github.io/graphgs/" class="pill" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/3DAgentWorld/GraphGS" class="pill" target="_blank" rel="noopener">Code</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@inproceedings{cheng2025graphgs,
+  title     = {Graph-Guided Scene Reconstruction from Images with 3D Gaussian Splatting},
+  author    = {Cheng, Chong and Song, Gaochao and Yao, Yiyang and Zhou, Qinzheng and Zhang, Gangjian and Wang, Hao},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2025}
+}</pre>
+            </div>
+          </article>
+
+          <!-- DB-MFENet -->
+          <article class="pub pub-compact" data-type="journal" data-selected="false">
+            <div class="pub-body">
+              <h3 class="pub-title"><span class="venue-inline">Remote Sensing 2025</span>DB-MFENet: A Dual-Branch Multi-Frequency Feature Enhancement Network for Hyperspectral Image Classification</h3>
+              <p class="pub-authors">Chen Zang, <span class="me">Gaochao Song</span>, Lei Li, Guangrui Zhao, Wanxuan Lu, Guiyuan Jiang, Qian Sun</p>
+              <p class="pub-venue"><em>Remote Sensing</em>, 17(8): 1458, 2025</p>
+              <div class="pub-links">
+                <a href="https://www.mdpi.com/2072-4292/17/8/1458" class="pill" target="_blank" rel="noopener">Paper</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@article{zang2025dbmfenet,
+  title   = {DB-MFENet: A Dual-Branch Multi-Frequency Feature Enhancement Network for Hyperspectral Image Classification},
+  author  = {Zang, Chen and Song, Gaochao and Li, Lei and Zhao, Guangrui and Lu, Wanxuan and Jiang, Guiyuan and Sun, Qian},
+  journal = {Remote Sensing},
+  volume  = {17},
+  number  = {8},
+  pages   = {1458},
+  year    = {2025}
+}</pre>
+            </div>
+          </article>
+
+          <!-- GVKF -->
+          <article class="pub" data-type="conference" data-selected="true">
+            <div class="pub-thumb">
+              <img src="images/gvkf.png" alt="GVKF" loading="lazy" />
+              <span class="venue-badge">NeurIPS 2024</span>
+            </div>
+            <div class="pub-body">
+              <h3 class="pub-title">GVKF: Gaussian Voxel Kernel Functions for Highly Efficient Surface Reconstruction in Open Scenes</h3>
+              <p class="pub-authors"><span class="me">Gaochao Song</span>, Chong Cheng, Hao Wang</p>
+              <p class="pub-venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024</p>
+              <div class="pub-links">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/bd31bfd4caa85bffe07a35568182cdfa-Paper-Conference.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/bd31bfd4caa85bffe07a35568182cdfa-Abstract-Conference.html" class="pill" target="_blank" rel="noopener">Paper</a>
+                <a href="https://3dagentworld.github.io/gvkf/" class="pill" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/3DAgentWorld/GVKF" class="pill" target="_blank" rel="noopener">Code</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@inproceedings{song2024gvkf,
+  title     = {GVKF: Gaussian Voxel Kernel Functions for Highly Efficient Surface Reconstruction in Open Scenes},
+  author    = {Song, Gaochao and Cheng, Chong and Wang, Hao},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {37},
+  pages     = {104792--104815},
+  year      = {2024}
+}</pre>
+            </div>
+          </article>
+
+          <!-- Octree volume rendering -->
+          <article class="pub pub-compact" data-type="journal" data-selected="false">
+            <div class="pub-body">
+              <h3 class="pub-title"><span class="venue-inline">CAGD 2024</span>Real-Time Volume Rendering with Octree-Based Implicit Surface Representation</h3>
+              <p class="pub-authors">Jiaze Li, Luo Zhang, Jiangbei Hu, Zhebin Zhang, Hongyu Sun, <span class="me">Gaochao Song</span>, Ying He</p>
+              <p class="pub-venue"><em>Computer Aided Geometric Design</em>, 111: 102322, 2024</p>
+              <div class="pub-links">
+                <a href="https://personal.ntu.edu.sg/yhe/papers/2024-cagd-octree.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0167839624000566" class="pill" target="_blank" rel="noopener">Paper</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@article{li2024realtime,
+  title   = {Real-Time Volume Rendering with Octree-Based Implicit Surface Representation},
+  author  = {Li, Jiaze and Zhang, Luo and Hu, Jiangbei and Zhang, Zhebin and Sun, Hongyu and Song, Gaochao and He, Ying},
+  journal = {Computer Aided Geometric Design},
+  volume  = {111},
+  pages   = {102322},
+  year    = {2024}
+}</pre>
+            </div>
+          </article>
+
+          <!-- OPE-SR -->
+          <article class="pub" data-type="conference" data-selected="true">
+            <div class="pub-thumb">
+              <img src="images/opesr.png" alt="OPE-SR" loading="lazy" />
+              <span class="venue-badge">CVPR 2023</span>
+            </div>
+            <div class="pub-body">
+              <h3 class="pub-title">OPE-SR: Orthogonal Position Encoding for Designing a Parameter-Free Upsampling Module in Arbitrary-Scale Image Super-Resolution</h3>
+              <p class="pub-authors"><span class="me">Gaochao Song</span>, Qian Sun, Luo Zhang, Ran Su, Jianfeng Shi, Ying He</p>
+              <p class="pub-venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2023</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2303.01091" class="pill" target="_blank" rel="noopener">PDF</a>
+                <a href="https://arxiv.org/abs/2303.01091" class="pill" target="_blank" rel="noopener">arXiv</a>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10204022/" class="pill" target="_blank" rel="noopener">IEEE</a>
+                <a href="https://github.com/gaochao-s/ope-sr" class="pill" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/gaochao-s/ope-sr" class="pill" target="_blank" rel="noopener">Code</a>
+                <button class="pill bib-toggle">BibTeX</button>
+              </div>
+              <pre class="bibtex">@inproceedings{song2023opesr,
+  title     = {OPE-SR: Orthogonal Position Encoding for Designing a Parameter-Free Upsampling Module in Arbitrary-Scale Image Super-Resolution},
+  author    = {Song, Gaochao and Sun, Qian and Zhang, Luo and Su, Ran and Shi, Jianfeng and He, Ying},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {10009--10020},
+  year      = {2023}
+}</pre>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li>
+            <div class="tl-date">2026.05 – Present</div>
+            <div class="tl-title">Research Intern</div>
+            <div class="tl-sub">Tencent Hunyuan 3D · Advisors: Zhuo Chen, Chunchao Guo</div>
+          </li>
+          <li>
+            <div class="tl-date">2024.09 – 2025.12</div>
+            <div class="tl-title">Research Assistant</div>
+            <div class="tl-sub">The University of Hong Kong (HKU) · Advisor: Prof. Shenghua Gao</div>
+          </li>
+          <li>
+            <div class="tl-date">2023.11 – 2024.08</div>
+            <div class="tl-title">Research Assistant</div>
+            <div class="tl-sub">HKUST (Guangzhou) · Advisor: Prof. Hao Wang</div>
+          </li>
+          <li>
+            <div class="tl-date">2023.03 – 2023.10</div>
+            <div class="tl-title">Research Intern</div>
+            <div class="tl-sub">S-Lab, Nanyang Technological University · Advisor: Prof. Ying He</div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>I'm always happy to discuss research ideas and potential collaborations. The best way to reach me is via email.</p>
+        <div class="contact-row">
+          <a class="btn btn-primary" href="mailto:gaochaosong@connect.hku.hk">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            gaochaosong@connect.hku.hk
+          </a>
+          <button class="btn btn-ghost" id="copyEmail" data-email="gaochaosong@connect.hku.hk">Copy email</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Gaochao Song · Last updated: Sep 2026</p>
+        <a href="#about" class="muted-link">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
